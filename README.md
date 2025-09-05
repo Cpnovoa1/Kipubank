@@ -46,3 +46,23 @@ Copiar código
    - Haz clic en **Deploy** y confirma en MetaMask.  
 
 ---
+
+---------------------------------------------------------
+🛠️ Cómo interactuar con el contrato
+---------------------------------------------------------
+
+1. Depositar ETH
+   - En Remix, ingresa un valor en el campo "Value" (ejemplo: 1 ether).
+   - Ejecuta la función:
+     deposit()
+
+2. Retirar ETH
+   - Ejecuta la función con el monto a retirar (en wei), siempre menor o igual al límite por transacción:
+     withdraw(500000000000000000)  // Retira 0.5 ETH
+
+3. Consultar saldo
+   - Para ver el saldo de una cuenta:
+     balanceOf(0xTuDireccion)
+
+4. Ver eventos
+   - Cada depósito y retiro exitoso emite un evento (Deposited, Withdrawn), que se puede consultar en Remix o en Etherscan si se despliega en testnet.
